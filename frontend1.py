@@ -29,7 +29,7 @@ with st.sidebar:
     page = st.radio("Navigate", ["🏠 Home"])
     #model_name = "Random Forest"
     #model = load_model('random_forest_model88.pkl')
-    model = pickle.load("random_forest_model88.pkl")
+    
 
 # Display page content
 #if page == "📚 About":
@@ -69,6 +69,7 @@ with st.sidebar:
  
 
 # Home page: Upload and classify an image
+model = pickle.load(open("random_forest_model88.pkl", 'rb')) 
 uploaded_file = st.file_uploader("Choose an image to analyze...", type=["jpg", "png", "jpeg"])
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
