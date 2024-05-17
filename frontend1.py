@@ -95,8 +95,8 @@ if uploaded_file is not None:
         image_array = np.array(image.convert('RGB'))
         image_resized = cv2.resize(image_array, (256, 256))
         image_gray = cv2.cvtColor(image_resized, cv2.COLOR_RGB2GRAY)
-        image_blurred = gaussian(image_gray, sigma=1.0)
-        image_flattened = image_blurred.flatten().reshape(1, -1)
+        #image_blurred = gaussian(image_gray, sigma=1.0)
+        image_flattened = image_gray.flatten().reshape(1, -1)
 
         if model:
             prediction = model.predict(image_flattened)
