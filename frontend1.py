@@ -22,7 +22,7 @@ st.set_page_config(
 )
 
 st.title("🛠 Metal Corrosion Detection")
-st.subheader("🔍 Discovering Imperfections: A Machine Learning Approach")
+st.subheader("🔍 Automated Metal Corrosion Detection in Pipes and Other Hard to Reach Critical Areas")
 
 # Add a sidebar for navigation
 with st.sidebar:
