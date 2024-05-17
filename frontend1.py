@@ -9,7 +9,6 @@ from skimage.io import imread
 from skimage.transform import resize
 from skimage.filters import gaussian
 import time
-from keras.models import load_model
 
 # Load labels
 labels = ["No Defect", "Metal corrosion"]
@@ -29,7 +28,8 @@ st.subheader("🔍 Discovering Imperfections: A Machine Learning Approach")
 with st.sidebar:
     page = st.radio("Navigate", ["🏠 Home"])
     #model_name = "Random Forest"
-    model = load_model('random_forest_model88.pkl')
+    #model = load_model('random_forest_model88.pkl')
+    model = pickle.load(open('random_forest_model88.pkl', 'rb'))
 
 # Display page content
 #if page == "📚 About":
