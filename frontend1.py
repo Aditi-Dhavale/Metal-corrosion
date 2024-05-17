@@ -29,7 +29,7 @@ with st.sidebar:
     page = st.radio("Navigate", ["🏠 Home"])
     #model_name = "Random Forest"
     #model = load_model('random_forest_model88.pkl')
-    model = pickle.load(open('random_forest_model88.pkl', 'rb'))
+    model = pickle.load("random_forest_model88.pkl")
 
 # Display page content
 #if page == "📚 About":
